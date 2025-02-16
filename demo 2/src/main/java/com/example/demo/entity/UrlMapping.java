@@ -1,6 +1,5 @@
 package com.example.demo.entity;
-import jakarta.persistence.*;
-import lombok.*;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +8,8 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
+//@Getter
+//@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
@@ -25,4 +24,20 @@ public class UrlMapping {
     private String longUrl;
 
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    public String getLongUrl() {
+        return longUrl;
+    }
+
+    public void setLongUrl(String longUrl) {
+        this.longUrl = longUrl;
+    }
+
+    public String getShortUrl() {
+        return shortUrl;
+    }
+
+    public void setShortUrl(String shortUrl) {
+        this.shortUrl = shortUrl;
+    }
 }
